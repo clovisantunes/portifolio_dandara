@@ -1,0 +1,56 @@
+.mainComponent{
+    width: 80%;
+    height: 36em;
+    display: flex;
+    flex-direction: row;
+    @media(max-width: 780px){
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+}
+.mainText{
+    width: 40%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1{
+        color: #FFFFFF;
+        font-size: 48px;
+    }
+    .title{
+        display: flex;
+        p{
+            color: #7B4AE2
+        }
+    }
+    span{
+        font-size: 18px;
+        color: #FFFFFF;
+        svg{
+            font-size: 24px;
+            margin-right: 8px;
+            color: #7B4AE2;
+            margin-top: 16px;
+            transition: all 0.3s ease-in-out;
+        }
+        svg:hover{
+            color: #FFFFFF;
+            cursor: pointer;
+        }
+    }
+}
+.mainImage{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media(max-width: 780px){
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
