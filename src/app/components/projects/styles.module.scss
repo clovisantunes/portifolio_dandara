@@ -1,0 +1,118 @@
+.projectsComponents {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-items: start;
+    @media(max-width: 480px){
+      width: 90%;
+    }
+  }
+  
+  .projectsCard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .projectCard {
+    background-color: none;
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    border: solid 2px rgba(123, 74, 226, 0.5);
+    -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    
+    display: flex;
+    flex-direction: column;
+  
+    @media(max-width: 480px){
+      width: 250px;
+   }
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  
+    h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #FFFFFF;
+    }
+  
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: #989797;
+    }
+  
+    .buttons {
+      display: flex;
+      margin-bottom: 18px;
+      margin-top: auto;
+  
+      .design {
+        width: 50%;
+        height: 24px;
+        margin-right: 8px;
+        background-color: rgba(123, 74, 226, 0.1);
+        border: none;
+        border-radius: 12px;
+        transition: background-color 0.3s, transform 0.2s;
+  
+        a {
+            font-size: 14px;
+          color: #7B4AE2;
+          text-decoration: none;
+          font-weight: bold;
+  
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+  
+        &:hover {
+          background-color: rgba(123, 74, 226, 0.2); 
+          transform: translateY(-2px);
+        }
+      }
+  
+      .online {
+        width: 50%;
+        height: 24px;
+        background-color: rgba(74, 226, 144, 0.3);
+        border: none;
+        border-radius: 12px;
+        transition: background-color 0.3s, transform 0.2s; 
+  
+        a {
+          color: #4AE290;
+          text-decoration: none;
+          font-weight: bold;
+  
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+  
+        &:hover {
+          background-color: rgba(74, 226, 144, 0.5); 
+          transform: translateY(-2px); 
+        }
+      }
+    }
+  
+    .projectImage {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: auto;
+    }
+  }
+  

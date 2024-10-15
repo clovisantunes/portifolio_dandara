@@ -1,0 +1,152 @@
+.ContactComponents {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4em;
+    align-items: center;
+
+    h2 {
+        margin-top: 2em;
+        color: #FFFFFF;
+        font-size: 48px;
+
+        @media(max-width: 480px) {
+            font-size: 32px; // Reduz o tamanho da fonte em telas pequenas
+            text-align: center; // Centraliza o texto
+        }
+    }
+}
+
+.contactButtons {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    @media(max-width: 480px) {
+        flex-direction: column; // Empilha os botões verticalmente em telas pequenas
+        align-items: center; // Centraliza os botões
+    }
+}
+
+.whatsappButton {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: 2px solid rgba(123, 74, 226, 0.5);
+    color: rgba(123, 74, 226, 0.5);
+    width: 100%;
+    height: 2.5em;
+    padding: 8px;
+    font-size: 18px;
+    border-radius: 16px;
+    margin-right: 32px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    svg {
+        width: 24px;
+        height: 24px;
+        color: rgba(123, 74, 226, 0.5);
+        margin-right: 8px;
+    }
+
+    &:hover {
+        background-color: #25D366; 
+        border-color: #25D366;
+        color: white;
+
+        svg {
+            color: white;
+        }
+    }
+
+    @media(max-width: 480px) {
+        margin-right: 0; // Remove a margem direita para centralizar
+        width: 90%; // Aumenta a largura do botão em telas pequenas
+    }
+}
+
+.emailContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    span {
+        font-size: 18px;
+        color: #7B4AE2;
+        margin: 10px 0; 
+
+        @media(max-width: 480px) {
+            font-size: 16px; // Reduz o tamanho da fonte em telas pequenas
+        }
+
+        svg {
+            width: 36px;
+            height: 36px;
+            color: rgba(123, 74, 226, 0.5);
+        }
+    }
+
+    .email {
+        color: rgba(255, 255, 255, 0.5);
+        margin: 10px 0;  
+
+        @media(max-width: 480px) {
+            font-size: 16px; // Reduz o tamanho da fonte em telas pequenas
+        }
+    }
+
+    button {
+        background: none;
+        border: none;
+        color: rgba(123, 74, 226, 0.5);
+        margin: 10px 0;  
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+.backToTopButton {
+    margin-top: 2em;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    background: none;
+    border: none;
+    color: rgba(123, 74, 226, 0.5);
+    width: 20%;
+    height: 2.5em;
+    padding: 8px;
+    font-size: 18px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+
+    svg {
+        width: 24px;
+        height: 24px;
+        margin-left: 8px;
+        transition: transform 0.3s ease;
+    }
+
+    &:hover {
+        background-color: rgba(123, 74, 226, 0.1);
+        color: rgba(123, 74, 226, 1);
+        border-color: rgba(123, 74, 226, 1);
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(123, 74, 226, 0.2); 
+
+        svg {
+            transform: translateX(4px);
+        }
+    }
+
+    @media(max-width: 480px) {
+        width: 90%; // Aumenta a largura do botão em telas pequenas
+        margin: 1em 0; // Adiciona margem em cima e embaixo
+    }
+}
