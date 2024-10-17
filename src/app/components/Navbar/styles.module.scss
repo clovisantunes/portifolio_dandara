@@ -9,13 +9,16 @@
     background-color: rgba(123, 74, 226, 0.2);
     border-radius: 16px;
     position: relative;
-
+    transition: all .5s ease-in-out;
     @media (max-width: 780px) {
         width: 100%;
         padding: 16px;
         flex-direction: row;
         justify-content: space-between;
     }
+    &.scrolled {
+        background-color: rgba(123, 74, 226, 1); 
+      }
 }
 
 .logo {

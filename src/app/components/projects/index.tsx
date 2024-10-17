@@ -13,35 +13,35 @@ const projects = [
     description: "DevRoom é a plataforma ideal para conectar clientes a projetos de desenvolvimento web. Oferecemos soluções personalizadas para empresas que buscam crescimento digital, com foco em design inovador, performance e resultados eficazes. Nosso objetivo é transformar suas ideias em projetos concretos, otimizando o processo de criação e captação de clientes.",
     image: devroom, 
     design: "Modern and responsive layout focused on user experience.",
-    online: "https://myecommerce.com"
+    online: "https://devroom.tech/"
   },
   {
     title: "Portfólio Clovis",
-    description: "DevRoom é a plataforma ideal para conectar clientes a projetos de desenvolvimento web. Oferecemos soluções personalizadas para empresas que buscam crescimento digital, com foco em design inovador, performance e resultados eficazes. Nosso objetivo é transformar suas ideias em projetos concretos, otimizando o processo de criação e captação de clientes.",
+    description: "Design de Portfólio Web, desenvolvido como uma landing page dinâmica e visualmente atraente, voltada para destacar e demonstrar as habilidades e conhecimentos do desenvolvedor. O projeto foi pensado para proporcionar uma experiência intuitiva e envolvente, refletindo as melhores práticas de design e desenvolvimento web.",
     image: PortClovis,
-    design: "Minimalist design focusing on project showcase.",
-    online: "https://myportfolio.com"
+    design: "https://www.figma.com/design/oNGNgwOACnYostyhI0cFjk/Portifolio-clovis?node-id=0-1&t=NxU3iN2PJL7U1WpS-1",
+    online: "https://clovis-antunes.vercel.app/"
   },
   {
     title: "Advocacia",
-    description: "Designer de uma landing page dedicada a advogados com diversas especializações em áreas do direito, como civil, comercial, trabalhista e penal",
+    description: "Design de uma landing page dedicada a advogados com diversas especializações em áreas do direito, como civil, comercial, trabalhista e penal",
     image: Advocacia,
-    design: "Clean and easy-to-navigate interface with dark mode.",
-    online: "https://myblogplatform.com"
+    design: "https://www.figma.com/design/GINVthAGpVvToTErOjCSnK/advocacia?node-id=0-1&t=TsbBYdmrJdTHjhOA-1",
+    online: ""
   },
   {
     title: "MultServ",
-    description: "Designer de uma landing page prestadores de serviços em diversas áreas, como manutenção, consultoria, design e muito mais.",
+    description: "Design de uma landing page prestadores de serviços em diversas áreas, como manutenção, consultoria, design e muito mais.",
     image: MultServ,
-    design: "Data-driven design with visual charts and graphs.",
-    online: "https://saasdashboard.com"
+    design: "https://www.figma.com/design/5WP50NA9OHt2VBnmseOUQE/multserv?node-id=1-2&t=hYqMykTxaO3xiSay-1",
+    online: ""
   },
   {
     title: "Contabiliza",
-    description: "Designer de uma landing page para um escritório de contabilidade",
+    description: "Design de uma landing page para um escritório de contabilidade",
     image: contabiliza,
-    design: "Vibrant and engaging UI with interactive elements.",
-    online: "https://mysocialmediaapp.com"
+    design: "https://www.figma.com/design/DqT6M5WTb2o2OiAz9p6BGM/Contabilidade?node-id=0-1&t=HztxmjzYsEyGaFdl-1",
+    online: ""
   }
 ];
 
@@ -61,11 +61,17 @@ export default function Projects() {
                       Acessar Design
                       </a>
                 </button>
-                <button className={styles.online}>
-                    <a href={project.online} target="_blank" rel="noopener noreferrer">
-                        Online
+                {project.online && (
+                  <button className={styles.online}>
+                    <a
+                      href={project.online}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Online
                     </a>
-                </button>
+                  </button>
+                )}
             
               </div>
               <Image

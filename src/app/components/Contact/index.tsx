@@ -11,6 +11,7 @@ import { FiArrowUp } from "react-icons/fi";
 
 export default function Contact() {
     const email = "dandarabiancas@gmail.com";
+    const whatsappNumber = "+555194742528"; 
 
     const copyEmailToClipboard = () => {
         navigator.clipboard.writeText(email);
@@ -41,9 +42,14 @@ export default function Contact() {
                 <h2>Vamos conversar!</h2>
 
                 <div className={styles.contactButtons}>
-                    <button className={styles.whatsappButton}>
+                    <a
+                        href={`https://wa.me/${whatsappNumber}?text=Olá%2C%20gostaria%20de%20conversar%20sobre%20um%20projeto!`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.whatsappButton}
+                    >
                         <FaWhatsapp /> Vamos conversar
-                    </button>
+                    </a>
 
                     <div className={styles.emailContainer}>
                         <span>
@@ -61,11 +67,6 @@ export default function Contact() {
             <button onClick={scrollToTop} className={styles.backToTopButton}>
                 Voltar ao Topo <FiArrowUp />
             </button>
-
-            <ToastContainer 
-                position="top-right"
-                style={{ zIndex: 9999 }} 
-            />
         </>
     );
 }

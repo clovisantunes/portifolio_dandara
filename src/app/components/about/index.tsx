@@ -1,12 +1,31 @@
+"use client"
 import Image from 'next/image';
 import styles from './styles.module.scss';
 import aboutImg from '../../assets/undraw_designer_life_re_6ywf.svg';
 import aboutMe from '../../assets/sobremim.png';
 import ButtonUI from '../UI/Button';
+import { Bounce, toast } from 'react-toastify';
 
 
 
 export default function About(){
+    const email = "dandarabiancas@gmail.com";
+
+    const copyEmailToClipboard = () => {
+        navigator.clipboard.writeText(email);
+        toast.success('Email copiado!', {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+        });
+    };
+
     return(
         <>
             <div className={styles.mainComponent}>
@@ -24,7 +43,7 @@ export default function About(){
                     <span>
                     </span>
                     <div className={styles.button}>
-                    <ButtonUI text='Entre em contato' />
+                    <ButtonUI text='Entre em contato' onClick={copyEmailToClipboard}/>
                     </div>
                 </div>
             </div>

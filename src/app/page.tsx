@@ -5,6 +5,7 @@ import About from "./components/about";
 import Projects from "./components/projects";
 import Contact from "./components/Contact";
 import Footer from "./components/copy";
+import { ToastContainer } from "react-toastify";
 
 export default function Home() {
   return (
@@ -17,6 +18,10 @@ export default function Home() {
       <Projects />
       <Contact />
       <Footer />
+      <ToastContainer 
+                position="top-right"
+                style={{ zIndex: 9999 }} 
+            />
     </main>
   );
 }
