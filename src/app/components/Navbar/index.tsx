@@ -41,7 +41,7 @@ export default function Navbar() {
             </div>
             <div className={`${styles.sections} ${isOpen ? styles.open : ''}`}>
                 <ul>
-                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="/">Início</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#projetos">Projetos</a></li>
                     <li><a href="#contato">Contato</a></li>

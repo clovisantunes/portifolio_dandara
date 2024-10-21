@@ -6,9 +6,12 @@ import aboutMe from '../../assets/sobremim.png';
 import ButtonUI from '../UI/Button';
 import { Bounce, toast } from 'react-toastify';
 
+interface aboutProps{
+    id: string;
+}
 
 
-export default function About(){
+export default function About({id}: aboutProps){
     const email = "dandarabiancas@gmail.com";
 
     const copyEmailToClipboard = () => {
@@ -28,7 +31,7 @@ export default function About(){
 
     return(
         <>
-            <div className={styles.mainComponent}>
+            <div className={styles.mainComponent} id={id}>
                 <div className={styles.mainImage}>
                     <Image src={aboutImg} alt='Imagem de perfil' />
                 </div>

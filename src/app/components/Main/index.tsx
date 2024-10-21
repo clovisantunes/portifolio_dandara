@@ -5,10 +5,14 @@ import hello from '../../assets/hello.png';
 import { FaLinkedin } from "react-icons/fa";
 import { IoMailSharp } from "react-icons/io5";
 
-export default function MainItem() {
+interface MainProps{
+    id: string;
+}
+
+export default function MainItem({id}: MainProps) {
     return (
         <>
-            <div className={styles.mainComponent}>
+            <div className={styles.mainComponent} id={id}>
                 <div className={styles.mainText}>
                     <Image src={hello} alt='Hello' />
                     <h1>

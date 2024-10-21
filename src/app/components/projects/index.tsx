@@ -45,10 +45,14 @@ const projects = [
   }
 ];
 
-export default function Projects() {
+interface ProjectsProps { 
+  id: string;
+
+}
+export default function Projects({id}: ProjectsProps) {
   return (
     <>
-      <div className={styles.projectsComponents}>
+      <div className={styles.projectsComponents} id={id}>
         <Image src={projectsBanner} alt='Projetos' />
         <div className={styles.projectsCard}>
           {projects.map((project, index) => (

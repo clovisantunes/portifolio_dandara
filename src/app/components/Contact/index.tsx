@@ -9,7 +9,11 @@ import { ToastContainer, Bounce, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FiArrowUp } from "react-icons/fi";
 
-export default function Contact() {
+interface ContactProps {
+    id: string;
+}
+
+export default function Contact({id}: ContactProps) {
     const email = "dandarabiancas@gmail.com";
     const whatsappNumber = "+555194742528"; 
 
@@ -37,7 +41,7 @@ export default function Contact() {
 
     return (
         <>
-            <div className={styles.ContactComponents}>
+            <div className={styles.ContactComponents} id={id}>
                 <Image src={contact} alt='contact item' />
                 <h2>Vamos conversar!</h2>
 

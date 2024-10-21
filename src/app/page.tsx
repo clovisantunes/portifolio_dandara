@@ -9,19 +9,21 @@ import { ToastContainer } from "react-toastify";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.navbarContaienr}>
+    <>
+      <header className={styles.navbarContainer}>
         <Navbar />
-      </div>
-      <MainItem />
-      <About />
-      <Projects />
-      <Contact />
+      </header>
+      <main className={styles.main}>
+        <MainItem id={'/'} />
+        <About id={'sobre'} />
+        <Projects id={'projetos'} />
+        <Contact id="contato"/>
+      </main>
       <Footer />
-      <ToastContainer 
-                position="top-right"
-                style={{ zIndex: 9999 }} 
-            />
-    </main>
+      <ToastContainer
+        position="top-right"
+        style={{ zIndex: 9999 }}
+      />
+    </>
   );
 }
