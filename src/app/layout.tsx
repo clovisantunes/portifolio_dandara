@@ -23,6 +23,24 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
           rel="stylesheet"
         />
+        <meta name="description" content="Portfólio de Dandara Bianca, especializada em Design UI/UX e estratégias de tráfego pago. Criação de interfaces intuitivas e atraentes para uma melhor experiência do usuário e aumento de conversões com marketing digital." />
+        <meta name="keywords" content="Dandara Bianca, design UI, design UX, tráfego pago, marketing digital, experiência do usuário, interfaces intuitivas, design responsivo, design de interação, conversão de leads, otimização de conversão, design visual, publicidade online, estratégia de tráfego" />
+        <meta name="author" content="Dandara Bianca" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="index, follow" />
+        <meta charSet="UTF-8" />
+
+        <meta property="og:title" content="Design UI/UX e Tráfego Pago | Dandara Bianca" />
+        <meta property="og:description" content="Aprimore sua presença online com design UI/UX de qualidade e estratégias de tráfego pago. Explore o portfólio de Dandara Bianca e veja os resultados." />
+        <meta property="og:image" content="/images/uiux-thumbnail.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.seusite.com" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Design UI/UX e Tráfego Pago | Dandara Bianca" />
+        <meta name="twitter:description" content="Veja os projetos de Dandara Bianca em design UI/UX e estratégias de tráfego pago para otimizar a experiência do usuário e conversão." />
+<meta name="twitter:image" content="/images/uiux-thumbnail.png" />
+
       </head>
       <body className={inter.className}>
       <Script
