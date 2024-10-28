@@ -4,7 +4,7 @@ import Script from "next/script";
 import "./styles/globals.scss";
 
 const inter = Inter({ subsets: ["latin"] });
-const googleAnalyticsId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID;
+
 
 export const metadata: Metadata = {
   title: "Portifolio - Dandara",
@@ -25,22 +25,21 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        {googleAnalyticsId && (
-          <>
-            <Script
-              strategy="afterInteractive"
-              src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
-            />
-            <Script id="google-analytics" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${googleAnalyticsId}');
-              `}
-            </Script>
-          </>
-        )}
+      <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-F819SS7VTV"
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+      >
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-F819SS7VTV');
+        `}
+      </Script>
         {children}
       </body>
     </html>
